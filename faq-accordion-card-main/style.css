@@ -1,0 +1,141 @@
+* {
+  font-family: "Kumbh Sans", sans-serif;
+  outline: none;
+}
+
+body {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to top,
+    hsl(240, 73%, 65%) 0%,
+    hsl(273, 75%, 66%) 100%
+  );
+  font-size: 12px;
+}
+
+.container-box {
+  width: 60%;
+  display: grid;
+  padding: 50px 30px 50px 0;
+  min-height: 80%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "illustration  questions";
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 13px 25px -4px rgba(0, 0, 0, 0.59);
+}
+
+.container-box .illustrations {
+  box-sizing: border-box;
+  padding: 10px;
+  grid-area: illustration;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+
+.container-box .illustrations .illustration-1 {
+  max-width: 100%;
+  position: relative;
+  max-height: 80%;
+}
+
+.container-box .questions {
+  position: relative;
+  max-width: 85%;
+  grid-area: questions;
+  margin: 0 30px;
+}
+
+.container-box .questions .question {
+  position: relative;
+}
+
+.container-box .questions .question hr {
+  color: hsl(240, 5%, 91%);
+}
+
+.container-box .question .tittle .tittle-text:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+.container-box .questions h1 {
+  font-size: 35px;
+}
+
+.container-box .questions .question .tittle .tittle-text {
+  font-weight: lighter;
+  margin: 0;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.container-box .questions .question .arrow {
+  position: absolute;
+  right: 5px;
+  top: 3px;
+  transition: 0.3s;
+}
+
+.container-box .questions .question .reply .reply-text {
+  margin: 0;
+  height: 0;
+  overflow: hidden;
+  color: hsl(237, 12%, 33%);
+  transition: 0.3s;
+}
+
+/*  ACTIVE JAVASCRIPT  */
+
+.container-box .questions .question.active .arrow {
+  transform: rotate(180deg);
+}
+
+.container-box .questions .question.active .tittle-text {
+  font-weight: 700;
+}
+
+.container-box .questions .question.active .reply-text {
+  height: auto;
+  padding: 10px;
+}
+
+@media screen and (max-width: 840px) {
+  .container-box {
+    margin-top: 70px;
+    display: flex;
+    position: relative;
+    width: 90%;
+    min-height: 500px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-box .illustrations {
+    position: absolute;
+    top: -130px;
+  }
+  .container-box .illustrations .illustration-1 {
+    width: 200px;
+    height: 150px;
+    margin: 20px 0;
+  }
+
+  .container-box .questions {
+    width: 90%;
+    margin: 80px 0 10px 0;
+  }
+
+  .container-box .questions h1 {
+    text-align: center;
+  }
+}
+
+.container-box .questions .question .reply .reply-text {
+  font: 15px;
+}
