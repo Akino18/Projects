@@ -1,0 +1,355 @@
+body {
+  font-family: "Inter", sans-serif;
+  padding: 0;
+  background: hsl(230, 17%, 14%);
+  background-repeat: no-repeat;
+  transition: all 0.3s;
+}
+
+body.active {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.container-box {
+  margin: auto;
+  max-width: 80%;
+  min-width: 60%;
+  display: grid;
+  padding: 10px;
+  gap: 20px;
+  grid-template-columns: repeat(4, minmax(auto, 1fr));
+  grid-template-areas:
+    "dashboard dashboard dashboard dashboard "
+    "social-media social-media social-media social-media"
+    "tittle tittle tittle tittle"
+    "overview overview overview overview";
+}
+
+/*                                   Dashboard                                    */
+
+.container-box .Dashboard {
+  grid-area: dashboard;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.container-box .Dashboard .social-dashboard h1 {
+  color: hsl(0, 0%, 100%);
+  margin: 0;
+}
+.container-box .Dashboard .social-dashboard p {
+  color: hsl(228, 34%, 66%);
+  margin: 0;
+}
+
+/* Dark mode button */
+
+.container-box .Dashboard .dark-mode {
+  display: flex;
+}
+
+.container-box .Dashboard .dark-mode .p-dark-mode {
+  margin: 5px;
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+}
+
+.container-box .Dashboard .dark-mode .switch {
+  width: 50px;
+  height: 18px;
+  padding: 5px;
+  display: flex;
+  border-radius: 100px;
+  background-image: linear-gradient(
+    to top,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+}
+
+.container-box .Dashboard .dark-mode .switch .btn-switch {
+  width: 20px;
+  background-color: hsl(228, 28%, 20%);
+  height: 100%;
+  outline: none;
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+  margin-right: 30px;
+  transition: all 0.2s;
+}
+
+/*                                         Social-media                                   */
+
+.social-media {
+  grid-area: social-media;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(4, minmax(auto, 1fr));
+}
+
+.social-media .container-social {
+  background-color: hsl(228, 28%, 20%);
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.container-hover:hover {
+  background: hsl(228, 28%, 25%);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/*                    Borders top         */
+
+.social-media .container-social.facebook {
+  border-top: 4px solid hsl(208, 92%, 53%);
+}
+
+.social-media .container-social.twitter {
+  border-top: 4px solid hsl(203, 89%, 53%);
+}
+
+.border {
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-image: linear-gradient(
+    to right,
+    hsl(37, 97%, 70%),
+    hsl(329, 70%, 58%)
+  );
+}
+
+.social-media .container-social.youtube {
+  border-top: 4px solid hsl(348, 97%, 39%);
+}
+
+/* User name */
+
+.social-media .container-social .user-name {
+  display: flex;
+  margin: 15px;
+}
+
+.social-media .container-social .user-name p {
+  color: hsl(228, 34%, 66%);
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.social-media .container-social .user-name img {
+  height: 50%;
+  display: block;
+  margin: auto 0;
+}
+
+/*Followers*/
+.social-media .container-social .followers {
+  text-align: center;
+  margin: 0 0 19px 0;
+}
+.social-media .container-social .followers .mun-followers {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.social-media .container-social .followers .p-followers {
+  margin: 0;
+  color: hsl(228, 34%, 66%);
+  text-transform: uppercase;
+  font-size: small;
+  letter-spacing: 4px;
+}
+
+.social-media .container-social .followers-today {
+  display: flex;
+}
+
+.positive {
+  color: hsl(163, 72%, 41%);
+}
+
+.negative {
+  color: hsl(356, 69%, 56%);
+}
+
+.social-media .container-social .followers-today img {
+  margin: auto;
+}
+
+.social-media .container-social .followers-today p {
+  margin-left: 5px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/*                                         Overview                                              */
+
+/*Overview tittle*/
+.overview-tittle {
+  grid-area: tittle;
+  grid-column: 1/4;
+  font-size: 20px;
+  color: hsl(0, 0%, 100%);
+}
+
+.overview-tittle h3 {
+  margin: 0;
+}
+
+/*Overview container*/
+
+.overview {
+  grid-area: overview;
+  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.overview .social-view {
+  background-color: hsl(228, 28%, 20%);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  min-width: 50px;
+  grid-template-rows: repeat(2, minmax(auto, 1fr));
+  padding: 10px 13px;
+  border-radius: 5px;
+}
+
+
+
+
+.overview .social-view:hover {
+  background-color: hsl(228, 28%, 25%);
+}
+
+/* Section 1 */
+
+.overview .social-view .section-1 {
+  display: flex;
+  width: 100%;
+  min-width: 1vw;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.overview .social-view .section-1 img {
+  width: 20px;
+  height: 20px;
+  margin: auto 0;
+  margin-left: 5px;
+}
+
+.overview .social-view .section-1 p {
+  margin: auto 1px;
+  color: hsl(228, 34%, 66%);
+  font-weight: bold;
+}
+
+/* Section 2 */
+
+.overview .social-view .section-2 {
+  display: flex;
+  width: 100%;
+  align-content: center;
+  justify-content: space-between;
+}
+
+
+.overview .social-view .section-2 .view  {
+  display: flex;
+  width: 100%
+  min-width:50% ;
+  margin-left: 5px;
+}
+
+.overview .social-view .section-2 .view img {
+  margin: auto 5px;
+}
+
+.overview .social-view .section-2 .num-view {
+  color: hsl(0, 0%, 100%);
+  margin: auto 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/*BTN ACTIVE light theme*/
+
+/*Dashboard*/
+
+.container-box .Dashboard .dark-mode .switch .btn-switch.btn-active {
+  margin-left: 30px;
+  background-color: hsl(0, 0%, 100%);
+  margin-right: 0;
+}
+
+.container-box .Dashboard .dark-mode .switch.switch-active {
+  background-image: none;
+  background-color: hsl(230, 22%, 74%);
+}
+body.active .container-box .Dashboard .social-dashboard h1 {
+  color: hsl(230, 17%, 14%);
+}
+body.active .container-box .Dashboard .social-dashboard p {
+  color: hsl(228, 12%, 44%);
+}
+
+body.active .container-box .Dashboard .dark-mode .p-dark-mode {
+  margin: 5px;
+  color: hsl(228, 34%, 66%);
+}
+
+/*container social*/
+
+body.active .container-box .social-media .container-social .followers h3 {
+  color: hsl(230, 17%, 14%);
+}
+
+body.active .container-box .social-media .container-social .user-name p {
+  color: hsl(230, 17%, 14%);
+}
+
+body.active .container-box .social-media .container-social .followers p {
+  color: hsl(228, 12%, 44%);
+}
+
+/* Overview Tittle*/
+
+body.active .container-box .overview-tittle {
+  color: hsl(228, 12%, 44%);
+}
+
+/*  Section 1  */
+
+body.active .container-box .overview .social-view .section-1 p {
+  color: hsl(228, 12%, 44%);
+}
+
+/* Section 2 */
+
+body.active .container-box .overview .social-view .section-2 .num-view {
+  color: hsl(230, 17%, 14%);
+}
+
+body.active .container-box .overview .social-view .section-2 .view p {
+  font-weight: bold;
+}
+
+.container-hover.light {
+  background-color: hsl(225, 100%, 96%);
+}
+.container-hover.light:hover {
+  background-color: hsl(227, 47%, 90%);
+  transition: 0.2s;
+}
+
