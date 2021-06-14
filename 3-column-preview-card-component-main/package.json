@@ -1,0 +1,11 @@
+{
+  "name": "frontend",
+  "version": "0.0.1",
+  "description": "challenger frontEnd",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./styles/scss/Style.scss ./styles/style.css"
+  },
+  "author": "Edguard",
+  "license": "ISC"
+}
