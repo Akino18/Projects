@@ -1,0 +1,11 @@
+{
+  "name": "sass",
+  "version": "0.0.1",
+  "description": "![Design preview for the Huddle landing page with single introductory section](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./styles/scss/style.scss ./styles/styles.css"
+  },
+  "author": "Yo",
+  "license": "ISC"
+}
