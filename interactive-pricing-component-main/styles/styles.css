@@ -1,0 +1,203 @@
+* {
+  font-family: "Manrope", sans-serif;
+  color: #858fad;
+  font-size: 1rem;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-image: url("../../images/bg-pattern.svg");
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 95%;
+  max-width: 470px;
+  margin: auto;
+}
+.container .container__title {
+  text-align: center;
+  padding: 1.3rem 0;
+  margin-bottom: 2rem;
+  background-image: url("../../images/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.container .container__title .title__h1 {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #293356;
+}
+.container .container__title .title__p {
+  width: 60%;
+  margin: auto;
+}
+.container .container__card {
+  background-color: #fafbff;
+  border-radius: 10px;
+  box-shadow: -5px 14px 30px 0px rgba(0, 0, 0, 0.1);
+}
+.container .container__card .card__main {
+  text-align: center;
+  border-bottom: 1px solid #eaeefb;
+}
+.container .container__card .card__main .main__slider {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+.container .container__card .card__main .main__slider .slider__pageviews {
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.container .container__card .card__main .main__slider .slider__month .RangeValue {
+  color: #293356;
+  font-size: 2rem;
+}
+.container .container__card .card__main .main__slider .slider {
+  background: #eaeefb;
+  -webkit-appearance: none;
+  height: 15px;
+  border-radius: 20px;
+}
+.container .container__card .card__main .main__slider .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-image: url("../../images/icon-slider.svg");
+  background-color: #10d5c2;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.container .container__card .card__main .main__slider .slider::-webkit-slider-thumb:hover {
+  box-shadow: 2px 30px 40px 2px rgba(16, 213, 194, 0.4);
+}
+.container .container__card .card__main .main__slider .slider:active::-webkit-slider-thumb {
+  background-color: #293356;
+  cursor: grabbing;
+}
+.container .container__card .card__main .card__change {
+  display: flex;
+  justify-content: center;
+}
+.container .container__card .card__main .card__change .text {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.container .container__card .card__main .card__change .change {
+  background-color: #eaeefb;
+  width: 15%;
+  max-width: 70px;
+  max-height: 38px;
+  margin: 10px;
+  border-radius: 20px;
+  position: relative;
+  transition: 0.3s ease;
+}
+.container .container__card .card__main .card__change .change .button {
+  width: 20px;
+  height: 60%;
+  border-radius: 100%;
+  background-color: white;
+  cursor: pointer;
+  position: absolute;
+  left: 5px;
+  top: 7px;
+  transition: 0.3s ease;
+}
+.container .container__card .card__main .card__change .change .button.active {
+  left: 60%;
+}
+.container .container__card .card__main .card__change .change:hover {
+  background-color: #10d5c2;
+}
+.container .container__card .card__main .card__change .change__discount {
+  background-color: #feece7;
+  border-radius: 20px;
+  color: #ff8c66;
+  padding: 5px;
+  margin-top: 11px;
+}
+.container .container__card .card__main .card__change .change__discount .discount {
+  display: none;
+}
+.container .container__card .card__info {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.container .container__card .card__info .text__container {
+  margin-bottom: 40px;
+}
+.container .container__card .card__info .text__container .info__text img {
+  margin-right: 10px;
+}
+.container .container__card .card__info .info__button {
+  text-decoration: none;
+  background-color: #293356;
+  color: #bdccff;
+  border-radius: 50px;
+  padding: 15px 60px;
+  margin: 50px;
+  transition: 0.2s;
+}
+.container .container__card .card__info .info__button:hover {
+  color: #ffff;
+}
+
+@media screen and (min-width: 700px) {
+  .container {
+    max-width: 660px;
+  }
+  .container .container__title {
+    padding: 4rem 0;
+  }
+  .container .container__card .card__main .main__slider {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "pageviews month" "input input";
+  }
+  .container .container__card .card__main .main__slider .slider__pageviews {
+    grid-area: pageviews;
+    align-self: center;
+  }
+  .container .container__card .card__main .main__slider .slider__month {
+    grid-area: month;
+  }
+  .container .container__card .card__main .main__slider .slider {
+    grid-area: input/input;
+  }
+  .container .container__card .card__main .card__change {
+    justify-content: flex-end;
+    margin-right: 60px;
+  }
+  .container .container__card .card__main .card__change .change__discount span.discount {
+    display: inline;
+    color: #ff8c66;
+  }
+  .container .container__card .card__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container .container__card .card__info .text__container {
+    margin: 0;
+    text-align: left;
+    margin-left: 60px;
+  }
+  .container .container__card .info__button[href="#"] {
+    padding: 15px 60px;
+    margin-right: 40px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
