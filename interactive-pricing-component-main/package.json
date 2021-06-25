@@ -1,0 +1,11 @@
+{
+  "name": "interactive-pricing-component-main",
+  "version": "0.0.1",
+  "description": "nada",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./styles/sass/styles.scss ./styles/styles.css"
+  },
+  "author": "YO",
+  "license": "ISC"
+}

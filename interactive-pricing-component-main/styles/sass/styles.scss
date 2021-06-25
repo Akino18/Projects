@@ -1,0 +1,299 @@
+$Full_Slider_Bar: hsl(174, 77%, 80%);
+$Slider_Backround: hsl(174, 86%, 45%);
+$Discount_Background: hsl(14, 92%, 95%);
+$Discount_Text: hsl(15, 100%, 70%);
+$CTA_Text: hsl(226, 100%, 87%);
+
+$Pricing_Component_Background: hsl(0, 0%, 100%);
+$Main_Background: hsl(230, 100%, 99%);
+$Empty_Slider_Bar: hsl(224, 65%, 95%);
+$Toggle_Background: hsl(223, 50%, 87%);
+$Text: hsl(225, 20%, 60%);
+$Text_CTA_Background: hsl(227, 35%, 25%);
+
+
+*{
+    font-family: 'Manrope', sans-serif;
+    color: $Text;
+    font-size: 1rem;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+
+
+body{
+    margin: 0;
+    height: 100vh;
+    background : {
+        image: url("../../images/bg-pattern.svg");
+        repeat: no-repeat; 
+
+    };
+}
+
+
+.container{
+    width: 95%;
+   
+    max-width: 470px;
+    margin:  auto;
+
+    .container__title{
+        text-align: center;
+        padding: 1.3rem 0;
+        margin: {
+            bottom: 2rem
+        }
+
+        background: {
+            image: url("../../images/pattern-circles.svg");
+            repeat:no-repeat;
+            position: center;
+        };
+
+
+        .title__h1{
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: $Text_CTA_Background
+        }
+
+        .title__p{
+            width: 60%;
+            margin: auto;
+        }
+
+        
+    }
+
+    .container__card{
+        background-color: $Main_Background;
+        border-radius: 10px;
+        box-shadow: -5px 14px 30px 0px rgba(0,0,0,0.10);
+
+        .card__main{
+            text-align: center;
+            border-bottom: 1px solid $Empty_Slider_Bar;
+        
+            .main__slider{
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                margin: auto;
+
+
+                .slider__pageviews{
+                    text-transform: uppercase;
+                    font-weight: 800;
+                    letter-spacing: 2px;
+                }
+
+                .slider__month{
+                    .RangeValue {
+                        color:$Text_CTA_Background;
+                    font-size: 2rem;
+                    }
+                }
+
+                .slider{
+                    background: $Empty_Slider_Bar;
+                    -webkit-appearance: none;
+                    height: 15px;
+                    border-radius: 20px;
+                
+                }
+
+                .slider::-webkit-slider-thumb{
+                    -webkit-appearance: none;
+                    width: 35px;
+                    height: 35px;
+                    cursor: pointer;
+                    background: {
+                        image: url("../../images/icon-slider.svg");
+                        color: $Slider_Backround;
+                        repeat: no-repeat;
+                        position: center;
+                    };
+                    border-radius: 50%;
+                    transition: all .3s ease;
+                }
+                .slider::-webkit-slider-thumb:hover{
+                   box-shadow: 2px 30px 40px 2px rgba($Slider_Backround, .4);
+                }
+
+                .slider:active::-webkit-slider-thumb{
+                    background-color: $Text_CTA_Background;
+                    cursor: grabbing;
+                }
+
+
+            }
+
+            .card__change{
+                display: flex;
+                justify-content: center;
+
+                .text {
+                    margin: {
+                        left:5px ;
+                        right: 5px;
+                    }
+
+                    
+                }
+                
+
+                .change{
+                    background-color: $Empty_Slider_Bar;
+                    width: 15%;
+                    max-width: 70px;
+                    max-height: 38px;
+                    margin: 10px;
+                    border-radius: 20px;
+                    position: relative;
+                    transition: .3s ease;
+
+                    
+                    
+
+                    .button {
+                        width: 20px ;
+                        height: 60%;
+                        border-radius: 100%;
+                        background-color: white;
+                        cursor: pointer;
+                        position: absolute;
+                        left: 5px;
+                        top: 7px;
+                        transition: .3s ease;
+                    }
+
+                    
+
+                    .button.active{
+                        left: 60%;
+
+                    }
+                }
+                .change:hover{
+                    background-color: $Slider_Backround;
+                }
+
+                .change__discount{
+                    background-color: $Discount_Background;
+                    border-radius: 20px;
+                    color: $Discount_Text;
+                    padding: 5px;
+                    margin-top: 11px;
+
+                    .discount{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .card__info{
+            text-align: center;
+            padding-bottom: 30px;
+
+            .text__container{
+                margin-bottom: 40px;
+                .info__text{
+
+                    img{
+                        margin-right: 10px;
+                    }
+                 }
+            }
+
+            .info__button{
+                text-decoration: none;
+                background-color: $Text_CTA_Background;
+                color: $CTA_Text;
+                border-radius: 50px;
+                padding: 15px 60px;
+                margin: 50px;
+                transition: .2s;
+            }
+
+            .info__button:hover{
+                color: #ffff;
+            }
+        }
+    }
+    
+}
+
+
+@media screen and(min-width: 700px) {
+    
+    .container{
+        max-width: 660px;
+
+        .container__title{
+            padding: 4rem 0;
+        }
+
+        .container__card{
+            .card__main{
+                .main__slider{
+                    display: grid ;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr 1fr;
+                   
+                    grid-template-areas: "pageviews month"
+                                         "input input";
+                    .slider__pageviews{
+                        grid-area: pageviews;
+                        align-self: center;
+                    }   
+        
+                    .slider__month {
+                        grid-area: month;
+                    }
+                    
+                    .slider{
+                        grid-area: input/input;
+                    }
+        
+        
+                }
+        
+                .card__change{
+                    justify-content: flex-end;
+                    margin-right: 60px;
+        
+                    .change__discount span.discount{
+                        display: inline ;
+                        color: $Discount_Text;
+                    }
+                }
+            }
+    
+    
+            .card__info{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+                .card__info .text__container{
+                    margin: 0 ;
+                    text-align: left ;
+                    margin-left: 60px ;
+                    
+                }
+    
+    
+                .info__button[href="#"]{
+                    padding:15px 60px ;
+                    margin-right:40px ;
+                  
+                }
+        }
+        
+    }
+}
+
