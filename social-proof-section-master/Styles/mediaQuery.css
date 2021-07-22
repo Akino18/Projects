@@ -1,0 +1,92 @@
+@media screen and (min-width: 1440px) {
+	body{
+	background: url("../images/bg-pattern-top-mobile.svg") top center, url("../images/bg-pattern-bottom-mobile.svg") bottom right;
+	background-repeat: no-repeat;
+
+}
+
+	.container{
+		text-align: left;
+		width: 85%;
+	}
+
+	.container__header{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.header__title{
+		width: 50%;
+		max-width: 500px;
+	}
+
+	.title{
+		font-size: 3rem;
+		margin: 15px 0;
+	}
+
+	.header__opinions{
+		width: 50%;
+		
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.opinions__container{
+		width: 75%;
+		display: flex;
+		padding: 20px 0;
+		margin: 10px 0;
+		
+	}
+
+	.auto{
+		margin: auto;
+	}
+
+	.right{
+		position: relative;
+		left: 23%;
+	}
+
+	.container__star{
+		margin: auto 10px;
+		width: 30%;
+		max-width: 120px;
+		height: 50%;
+	}
+
+	.opinions__text{
+		height: 50%;
+		
+
+	}
+
+	.container__review{
+		
+		display: flex;
+		margin: 20px 0;
+		height:360px ;
+	}
+
+	.review__container{
+		height: 80%;
+	}
+
+	.center{
+		align-self: center;
+	}
+
+	.end{
+		align-self: flex-end; 
+	}
+
+	.container__user{
+		width: 100%;
+		padding: 10px 0;
+	}
+}
+
+
