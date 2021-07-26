@@ -1,0 +1,200 @@
+@mixin  button ( $color, $top, $right, $left,$bottom ) {
+            
+    color: black;
+    cursor:pointer;
+    text-decoration: none;
+    border-bottom: 1px solid $color;
+    padding: {
+        top: $top;
+        right: $right;
+        left: $left;
+        bottom: $bottom;
+    }
+
+}
+
+
+.header{
+    background: {
+        image:url("../images/image-hero-mobile.jpg");
+        repeat:no-repeat;
+        size:cover
+    };
+    height: 50vh;
+    position: relative;
+    
+  
+
+
+    &__container{
+
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: {
+            top: 50px;
+            left: 10%;
+            right: 10%;
+        };
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.555), transparent);
+
+        .container__logo{
+            width: 50%;
+            z-index: 20;
+            height: 1.5rem;
+            
+        }
+    
+        .container__hamburguer{
+            width: 50%;
+            height: 1.5rem;
+            z-index: 20;
+    
+            &__img.hamburguer{
+                float: right;
+                cursor: pointer;
+                transition: all .3s ease-in-out;
+            }
+    
+            &__img.hamburguer.disable{
+                opacity: 0;
+                display: none;
+                transition: all .3s ease-in-out;
+            }
+    
+            &__img.close__icon{
+                visibility: hidden;
+                cursor: pointer;
+                float: right;
+                opacity: 0;
+                
+            }
+    
+            &__img.close__icon.active{
+                opacity: 1;
+                visibility: visible;
+                transition: all .3s ease-in-out;
+            }
+    
+            
+            
+        }
+    
+        .container__links{
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            font-weight: 500;
+            border-radius: 20px;
+            visibility: hidden;
+            opacity: 0;
+            height: min-content;
+            width: 100%;
+            position: relative;
+            top: -90px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 20;
+            transition: all .3s ease-in-out;
+            animation: close .5s;
+    
+         
+    
+            .header__links__a{
+                @include button(#f6f6f6,24px,24px,24px,24px)
+                
+                
+            }
+        
+            .header__links__a.links__last{
+                border: none;
+            }
+    
+            
+        }
+    
+        
+    }
+
+    &__container.active{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2,minmax(100px,150px));
+        grid-template-areas: "logo hamburger"
+                    "links links";
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        height: 100%;
+        overflow-x: hidden;
+        z-index: 10;
+
+        .container__logo{
+            grid-area: logo;
+            width: 100%;
+        }
+
+        .container__hamburguer{
+            grid-area: hamburger;
+            width: 100%;
+        }
+
+        .container__links{
+            grid-area: links;
+            opacity: 1;
+            visibility: visible;
+            transition: all .1s ease-in-out;
+        }
+       
+    }
+    
+}
+
+@media screen and(min-width: 650px) {
+    
+    .header{
+        padding: {
+            top: 0;
+        };
+        justify-content: space-between;
+
+        background: {
+            image:url("../images/image-hero-desktop.jpg");
+           
+        };
+
+
+        &__container{
+            margin-right: 0px;
+
+            .container__hamburguer{
+                display: none;
+                
+            }
+            .container__links{
+                visibility: visible;
+                opacity: 1;
+                width: 50%;
+                background-color: transparent;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                border-radius: 0;
+                height: min-content;
+                position: static;
+                margin: 0;
+    
+                .header__links__a{
+                    @include button(transparent,10px,10px,10px,10px);
+                    color:white;
+                    font-weight: 400;
+                }
+            }
+
+        }
+    }
+}

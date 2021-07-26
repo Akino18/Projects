@@ -1,0 +1,11 @@
+{
+  "name": "sass",
+  "version": "0.0.1",
+  "description": "desafio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./styles/styles.scss  ./styles/styles.css"
+  },
+  "author": "edguard",
+  "license": "ISC"
+}

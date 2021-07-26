@@ -1,0 +1,280 @@
+
+.container{
+    width: 90%;
+    max-width: 47rem;
+    margin: auto;
+    position: absolute;
+    top: 14.75rem;
+    left: 0;
+    right: 0;
+ 
+
+    &__1{
+        
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        .start{
+            display: block;
+            margin-bottom: 10px;
+
+            img{
+                position: absolute;
+                top: -.7rem;
+                margin: auto;
+                left: 0;
+                right: 0;
+            }
+
+            
+        }
+
+        .end{
+            display: flex;
+            justify-content: space-evenly;
+            height: 4rem;
+            max-height: 5rem;
+
+            .button__svg{
+                display: flex;
+                cursor: pointer;
+                margin-left: 10px;
+                 
+                .text{
+                    display: none;
+                }
+            }
+
+            .button__svg.active{
+                margin-left: 10px;
+                transition: .3s ease;
+
+                svg{
+                    circle{
+                        fill: hsl(176, 72%, 28%);
+                        transition: .3s ease;
+                    }
+                    path{
+                        fill: white;
+                        transition: .3s ease;
+                    }
+                }
+
+                .text{
+                    color: hsl(176, 72%, 28%);
+                }
+              
+            }
+
+            .button__svg:hover{
+                opacity: .7;
+            }
+        }
+
+    }
+
+    &__2{
+        text-align: center;
+
+        .margin{
+            border: {
+                top:  1px solid hsl(0, 0%, 48%);
+                bottom: 1px solid hsl(0, 0%, 48%)
+            };
+            width: 30%;
+            margin: 20px auto;
+            padding: {
+                top:  20px;
+                bottom: 20px
+            };
+        }
+
+        
+
+        .progress {
+
+            border-radius: 20px;
+            width: 90%;
+          
+          }
+          
+          .progress {
+            margin-top: 20px;
+          }
+          
+          .progress::-webkit-progress-value {
+            background: lightblue;
+          }
+          
+          .progress::-moz-progress-bar {
+            background: lightcolor;
+          }
+          
+          .progress::-webkit-progress-value {
+            background: hsl(176, 50%, 47%);
+            border-radius: 20px;
+          }
+          
+          .progress::-webkit-progress-bar {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+          }
+          
+         
+    }
+
+    &__3{
+
+        .title{
+            margin: 0;
+        }
+
+        .text{
+            margin: {
+                top: 15px;
+                bottom: 20px
+            };
+        }
+
+        .button{
+            margin-top: 20px;
+        }
+
+        .subContainer__3{
+            .subcontainer__end{
+                
+
+                    .left__text{
+
+                        .left__span{
+                            margin: 0 10px;
+                            position: relative;
+                            bottom: 8px;
+                            font-weight: 400;
+                            color: #7a7a7a;
+                        }
+                    }
+                
+            }
+        }
+    }
+}
+
+
+// MEDIA QUERY
+
+@media screen and(min-width:650px){
+
+    .container{
+    
+        &__1{
+    
+            .end{
+                display: flex;
+                justify-content: space-between;
+                height: 4rem;
+                max-height: 5rem;
+    
+                .button__svg{
+                    align-items: center;
+                    background-color: rgba(0, 0, 0, .1);
+                    border-radius: 50px;
+                    height: 3.6rem;
+
+                    .svg{
+                        position: relative;
+                        left: -.3rem; 
+                    }
+                  
+                   
+                    .text{
+                        display: block;
+                        font-weight: 700;
+                        margin: {
+                            left: 20px;
+                            right: 20px
+                        };
+                    }
+                }
+                
+            }
+    
+        }
+    
+        &__2{
+            text-align: center;
+
+            .main__2{
+                display: flex;
+                justify-content: center;
+            }
+    
+            .margin{
+                border: {
+                    left:  1px solid hsl(0, 0%, 48%);
+                    right: 1px solid hsl(0, 0%, 48%);
+                    top: 0;
+                    bottom: 0;
+                };
+                width: 30%;
+                margin: 0 20px;
+                padding: {
+                    top:  0;
+                    bottom: 0
+                };
+            }
+    
+    
+            .progress {
+    
+                border-radius: 20px;
+                width: 90%;
+              
+              }   
+             
+        }
+    
+        &__3{
+    
+            .title{
+                margin: 0;
+            }
+    
+            .text{
+                margin: {
+                    top: 15px;
+                    bottom: 20px
+                };
+            }
+    
+            .button{
+                margin-top: 20px;
+            }
+    
+            .subContainer__3{
+                .subcontainer__end{
+                    display: flex;
+                    justify-content: space-between;
+
+                    .button{
+                        margin: 0;
+                    }
+                    
+                    .left__text{
+                    height: 80%;
+                    margin: auto 0;
+    
+                        .left__span{
+                            margin: 0 10px;
+                            position: relative;
+                            bottom: 8px;
+                            font-weight: 400;
+                            color: #7a7a7a;
+                            }
+                        }
+                }
+            }
+        }
+    }
+}
