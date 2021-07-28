@@ -1,0 +1,41 @@
+
+
+$primary: hsl(179, 62%, 43%);
+$secondary: hsl(179, 62%, 50%) ;
+
+.bg-Light-grayish-blue{
+	background-color: hsl(204, 43%, 93%);
+}
+
+
+.h2{
+	color: #2ab2af;
+}
+
+.text{
+	color: hsl(218, 22%, 67%);
+}
+
+.yellow{
+	color: hsl(71, 73%, 54%);
+	font-weight: 700 !important;
+}
+
+.container-medio{
+	max-width: 800px !important
+}
+
+.btn-yellow{
+	background-color: hsl(71, 73%, 54%) !important;
+	color: white !important;
+	font-weight: 700 !important
+}
+
+.span{
+	color: hsl(204, 43%, 93%)
+}
+
+ul{
+	color: hsl(204, 43%, 93%);
+}
+@import "../node_modules/bootstrap/scss/bootstrap";
