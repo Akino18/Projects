@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Loopstudios landing page</title>
+   <!--FONTS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+  <!--STYLE-->
+  <link rel="stylesheet" href="styles/reducido.css">
+  <link rel="stylesheet" href="styles/style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header class="header  container-fluid p-0 p-lg-4 d-flex flex-column min-vh-75">
+
+    <nav id="navbar" class="navbar d-flex align-items-start float-lg-end p-4 p-lg-0  navbar-expand-lg container-fluid">
+      <div class="container-fluid d-flex ">
+        <a href="#" class="logo navbar-brand">
+           <img src="images/logo.svg" alt="Logo">
+        </a>
+
+        <button class="navbar-toggler" id="nav-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+         <span id="toggler__icon" class="navbar-toggler-icon"><img id="toggler__img" src="images/icon-hamburger.svg" alt=""></span>
+       </button>
+
+        <div class="collapse navbar-collapse  d-lg-flex justify-content-end " id="navbarNavAltMarkup">
+         <div class="navbar-nav  ">
+           <a class="nav-link title link" aria-current="page" href="#">About</a>
+           <a class="nav-link title link" href="#">Careers</a>
+           <a class="nav-link title link" href="#">Events</a>
+           <a class="nav-link title link" href="#" tabindex="-1" aria-disabled="true">Products</a>
+           <a class="nav-link title link" href="#" tabindex="-1" aria-disabled="true">Support</a>
+          </div>     
+      </div>
+     </div>
+    </nav>
+
+     <div class="border header__title border-2 p-4 m-auto mx-2 ">
+        <h1 class="title  m-0 text-uppercase">Immersive experiences that deliver</h1>
+      </div>
+  </header>
+
+
+  <main class="container mb-5">
+    <section class="container-fluid mt-5 mb-5  main text-center">
+    <div class="main__img">
+      <img id="img__main" src="images/mobile/image-interactive.jpg" alt="" class="img__main">
+    </div>
+
+    <div class="main__text  m-3 m-lg-0 p-lg-5 pb-lg-0">
+      <h2 class="title text-dark">The leader in interactive VR</h2>
+
+      <p class="text">
+        Founded in 2011, Loopstudios has been producing world-class virtual reality 
+        projects for some of the best companies around the globe. Our award-winning 
+        creations have transformed businesses through digital experiences that bind 
+        to their brand.
+      </p>
+    </div>
+  </section>
+
+  <section class="container-fluid d-flex flex-column align-items-center  creations">
+    <h2 class="title text-dark text-center order-1">Our creations</h2>
+
+     <div class="container order-3 w-50 w-md-25 order-lg-1 mt-4 mt-lg-0 mb-lg-4 mx-lg-auto  ">
+       <button class="btn btn-outline-dark w-100  rounded-0 border-2 ff-alata text-uppercase ls-5 w-100">See all</button>
+     </div>
+
+     <div class="gallery order-2 ">
+
+       <article class="creations__earth grid__images m-0 d-flex flex-column justify-content-end  p-4 pb-2 col-sm-12  ">
+        <span class="title">Deep</span>
+         <h3 class="title m-0 "> earth</h3>
+       </article>
+       <article class="creations__arcade grid__images d-flex flex-column justify-content-end p-3 m-0 col-sm-12 ">
+         <span class="title">Night</span>
+         <h3 class="title "> arcade</h3>
+       </article>
+       <article class="creations__Soccer grid__images d-flex flex-column justify-content-end  p-3 m-0 col-sm-12 ">
+         <span class="title">Soccer</span>
+         <h3 class="title "> team VR</h3>
+       </article>
+       <article class="creations__grid grid__images d-flex flex-column justify-content-end  p-3 m-0 col-sm-12">
+         <span class="title">The</span>
+         <h3 class="title "> grid</h3>
+       </article>
+       <article class="creations__VR grid__images d-flex flex-column justify-content-end p-3 m-0 col-sm-12 ">
+         <span class="title">From</span>
+         <h3 class="title  "> up above VR</h3>
+       </article>
+       <article class="creations__Pocket grid__images d-flex flex-column justify-content-end p-3 m-0 col-sm-12 ">
+         <span class="title">Pocket</span>
+        <h3 class="title  "> borealis</h3>
+       </article>
+       <article class="creations__curiosity grid__images d-flex flex-column justify-content-end p-3 m-0 col-sm-12 ">
+         <span class="title">The</span>
+         <h3 class="title  "> curiosity</h3>
+       </article>
+       <article class="creations__fisheye grid__images d-flex flex-column justify-content-end p-3 m-0 col-sm-12 ">
+         <span class="title">Make it</span>
+         <h3 class="title "> fisheye</h3>
+       </article>
+     </div>
+
+    
+
+  </section>
+  </main>
+  
+
+  <footer class="bg-dark footer p-4 text-center d-lg-flex justify-content-between">
+    <div class="footer__links m-3 d-lg-flex flex-column  justify-content-center justify-content-lg-start">
+      <div class="container__logo  container-fluid m-0">
+        <img class="float-lg-start" src="images/logo.svg" alt="">
+      </div>
+       <div class="links__container m-3 d-lg-flex ">
+        <a href="#"class=" text-decoration-none text p-0 link me-lg-3">About</a>
+        <a href="" class=" text-decoration-none text p-0 link me-lg-3">Careers</a>
+        <a href="" class=" text-decoration-none text p-0 link me-lg-3">Events</a>
+        <a href="" class=" text-decoration-none text p-0 link me-lg-3">Products</a>
+        <a href="" class=" text-decoration-none text p-0 link me-lg-3">Support</a>
+       </div>
+    </div>
+
+    <div class="footer__social float-lg-end">
+      <div class="social__media m-3 text-lg-end">
+        <a href="#" class="m-2 "><img src="images/icon-facebook.svg" alt=""></a>
+        <a href="#" class="m-2 "><img src="images/icon-twitter.svg" alt=""></a>
+        <a href="#" class="m-2 "><img src="images/icon-pinterest.svg" alt=""></a>
+        <a href="#" class="m-2 "><img src="images/icon-instagram.svg" alt=""></a>
+      </div>
+      <div class="social__copy">
+         <p class="copy">© 2021 Loopstudios. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Akino</a>.
+  </div>
+
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/images.js"></script>
+</body>
+</html>
