@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Four card feature section</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .attribution a {
+        color: hsl(228, 45%, 44%);
+    }
+    </style>
+</head>
+
+<body class="bg-secondary">
+    <main class="container-md p-3 ">
+        <section class="container__text text-center">
+            <h1 class="text-dark"><span class="fw-light">Reliable, efficient delivery</span>
+                <br>
+                Powered by Technology</h1>
+            <p class="text-success">Our Artificial Intelligence powered tools use millions of project data podints
+                to ensure that your project is successful</p>
+        </section>
+
+        <section class="container__cards d-flex flex-column flex-lg-row align-items-lg-center text-success" >
+
+          <div class="cards__card card__1 my-5 my-lg-0 me-lg-4 p-4 border-top border-3 border-info shadow rounded">
+            <div class="card__text text-dark">
+              <h3 class="fw-bold">Supervisor</h3>
+              <p class="text-success">Monitors activity to identify project roadblocks</p>
+            </div>
+            <div class="card__img d-flex  justify-content-end">
+              <img src="images/icon-supervisor.svg" alt="">
+            </div>
+          </div>
+
+          <div class="card__container  ">
+
+              <div class="cards__card 2 p-4 border-top border-3 border-danger shadow rounded">
+            <div class="card__text">
+              <h3 class="fw-bold text-dark">Team Builder</h3>
+              <p>Scans our talent network to create the optimal team for your project</p>
+            </div>
+            <div class="card__img d-flex  justify-content-end">
+              <img src="images/icon-team-builder.svg" alt="">
+            </div>
+          </div>
+
+          <div class="cards__card 3 my-5 my-lg-4 p-4 border-top border-3 border-warning shadow rounded">
+            <div class="card__text">  
+              <h3 class="fw-bold text-dark">Karma</h3>
+              <p>Regularly evaluates our talent to ensure quality</p>
+            </div>
+            <div class="card__img d-flex  justify-content-end">
+              <img src="images/icon-karma.svg" alt="">
+            </div>
+          </div>
+          </div>
+
+          <div class="cards__card card__4 ms-lg-4 p-4 border-top border-3 border-primary shadow rounded">
+            <div class="card__text">
+              <h3 class="fw-bold text-dark">Calculator</h3>
+              <p >Uses data from past projects to provide better delivery estimates</p>
+            </div>
+            <div class="card__img d-flex  justify-content-end">
+              <img src="images/icon-calculator.svg" alt="">
+            </div>
+          </div>
+
+        </section>
+    </main>
+    <footer>
+        <p class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">Akino</a>.
+        </p>
+    </footer>
+</body>
+
+</html>
