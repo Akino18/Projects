@@ -1,0 +1,17 @@
+.background {
+	background: rgba(118,20,183, 0.4);
+}
+
+.text{
+	color: hsla(0, 0%, 100%, 0.75);
+}
+
+@media (min-width: 992px){
+	.container__main{
+		width: 50%
+	}
+
+	.main__container{
+		width: 90%;
+	}
+}
