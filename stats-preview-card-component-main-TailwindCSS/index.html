@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="bg-blue-dark min-h-screen flex flex-col py-10 ">
+  
+  <main class="container w-10/12 max-w-screen-lg  m-auto lg:flex lg:flex-row-reverse rounded-md overflow-hidden ">
+
+    <div class="container__img lg:w-2/4 relative ">
+
+      <div class="absolute bg-violet-transparent h-full w-full "></div>
+      <picture class="w-full">
+        <source srcset="images/image-header-desktop.jpg" class="m-0 h-full w-full"  media="(min-width: 1024px)">
+        <img src="images/image-header-mobile.jpg" class=" h-full w-full" alt="banner">
+      </picture>
+      
+      <img src="images/image-header-desktop.jpg" class="img2 hidden h-full  w-full" alt="">
+
+    </div>
+
+    <div class="container__main bg-blue-desaturated p-6 lg:p-16  text-center lg:text-left text-white lg:w-2/4 ">
+       <h1 class="main__title text-4xl font-bold font-inter">Get <span class="text-violet-soft">insights</span> that help your business grow.</h1>
+
+       <p class="main__content text-white-transparent my-8 lg:w-4/5  ">
+         Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+         experience, and overall efficiency.
+       </p>
+
+       <div class="main__info lg:flex flex-row  font-lexe lg:mt-20">
+
+         <div class="info__1 m-5 lg:m-0 lg:mr-8">
+           <h3 class="font-bold text-2xl">10k+</h3> 
+           <p class="uppercase text-white-transparent">companies</p>
+           
+         </div>
+
+         <div class="info__2 m-5 lg:m-0 lg:mr-8">
+           <h3 class="font-bold text-2xl">314</h3> 
+           <p class="uppercase text-white-transparent">templates</p>
+         </div>
+
+         <div class="info__3 m-5 lg:m-0 lg:mr-8
+         ">
+           <h3 class="font-bold uppercase text-2xl">12m+</h3> 
+           <p class="uppercase text-white-transparent">queries</p>
+           
+         </div>
+          
+       </div>
+     </div>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Akino</a>.
+  </div>
+</body>
+</html>
