@@ -1,0 +1,7 @@
+.data__result{
+    font-weight: normal;
+}
+.container__data{
+    font-weight:800;
+    @apply my-6
+}
